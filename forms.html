@@ -6,30 +6,203 @@
 	</head>
 	<body>
 		<form action="#" method="post">
-			
-			<<fieldset>
+			<!-- Текстовые поля -->
+			<fieldset>
 				<legend>Текстовые поля</legend>
+
+			<!-- Однострочное текстовое поле -->
 				<div>
-				<label for="text_field">Однострочное текстовое поле</label>
-				<input id="text_field" type="text" placeholder="placeholder" required <!-- проверка заполнения -->
+				<label for="text_field">Однострочное текстовое поле</label> <!--Связывает с полем, можно нажать на оба места-->
+				<input  id="text_field" type="text" placeholder="placeholder"  name="text" required <!-- проверка заполнения -->
+				</div>
+			</fieldset>
+
+			<!-- E-mail -->
+			<fieldset>
+				<div>
+				<label for="email">E-mail</label> 
+				<input  id="email" type="email" placeholder="placeholder" disabled>
 				</div>
 			</fieldset>
 
 			<fieldset>
 				<div>
-				<legend>Текстовые поля</legend>
-				<label for="pwd">Однострочное текстовое поле</label>
-				<input id="pwd" type="password" placeholder="password" required <!-- проверка заполнения -->
+				<label for="email">E-mail</label> 
+				<input  id="email" type="email" value="Email">
 				</div>
+			</fieldset>
+
+			<!-- disabled  -->
+			<!--form="form_id" для связки с form по ID -->
+			
+			<!-- URL -->
+			<fieldset>
+				<div>
+				<label for="url">URL</label> 
+				<input  id="url" type="url" placeholder="placeholder" required>
+				</div>
+			</fieldset>
+
+			<!-- Поиск -->
+			<fieldset>
+				<div>
+				<label for="search">Search</label> 
+				<input  id="search" type="search" placeholder="search" required autofocus>
+				</div>
+			</fieldset>
+
+			<!-- Пароль -->
+			<fieldset>
+				<div>
+				<legend>Пароль</legend>
+				<label for="pwd">password</label>
+				<input id="pwd" type="password" placeholder="password" maxlength="5" required> <!-- проверка заполнения -->
+				</div>
+
+			<!-- Многострочное текстовое поле -->
 				<div>
 				<label for="text_area">Многострочное текстовое поле</label>
-				<textarea rows="5" id="text_area"></textarea> -->
+				<textarea rows="5" id="text_area"></textarea> 
 				</div>
+
+
+				<div>
+				<label for="text_area">Многострочное текстовое поле</label>
+				<textarea 
+					rows="30" 
+					cols="20" id="text_area" wrap="soft">
+				</textarea> 
+				</div>
+
 				<div>
 					<input type="hidden"> <!-- скрытое поле -->
 				</div>
 			</fieldset>	
+		
+		<!-- Числа -->
+		<fieldset>
+				<legend>Numbers</legend>
+				<div>
+					<label for="number">Number</label>
+					<input type="number" name="number"
+					min="4"
+					max="8"
+					step="1" >
+				</div>
 
+				<!-- Ползунок  -->
+				<legend>Range</legend>
+				<div>
+					<label for="Range">Range</label>
+					<input type="range" name="range"
+					min="4"
+					max="8"
+					step="1" >
+				</div>
+				<br>
+				<legend>CheckBox Radio</legend>
+
+				<!-- Одиночные радиокнопки -->
+				<fieldset> 
+					<legend>Одиночные радиокнопки</legend>
+					<label><input type="radio">text</label> 
+
+					<input type="radio" checked>
+				</fieldset>
+
+				<!-- Радиогруппа -->
+				<fieldset> 
+					<legend>Радиогруппа</legend>
+					<label><input type="radio" name="sex">Мужской</label>
+					<label><input type="radio" name="sex">Женский</label>
+					<label><input type="radio" name="sex">Не определился</label>
+					<!-- Кнопки связывает name -->
+				
+				<!-- CheckBox -->
+				<div>
+					<input type="checkbox" checked>
+					<input type="checkbox">
+				</div>
+
+				<!-- Загрузка файлов -->
+				<div>
+					<label><input type="file">
+						Загрузка файла
+					</label> 
+				</div>
+				<div>
+					<label><input type="file" multiple accept="image/*">Загрузка нескольких файлов изображений
+					</label>
+				</div>
+
+				</fieldset>
+			</fieldset>
+
+			<!-- Кнопки -->
+			<legend>Buttons</legend>
+			<input type="button" value="Button"> 
+			<!-- надо JS -->
+			<input type="submit" value="submit"> 
+			<!-- отправка формы -->
+			<input type="reset" value="reset"> 
+			<!-- очистка формы -->
+			<input type="image" src="url" alt="">
+			<!-- кнопка картинка -->
+			<button>Button</button>
+			<!-- отправка формы -->
+			</form>
+
+			<!-- Списки -->
+			<form>
+			<fieldset>
+				<legend>LIST</legend>
+				<select size="2"> 
+				<!--autofocus
+				disable
+				multiple
+				required
+				name
+				size - видимое количество списка-->
+				<option value="1">item 1</option> <!-- элемент списка -->
+				<option value="2" label="label">item 2</option>
+				<option value="3" selected <!-- выбран по умолчанию -->item 3</option>
+				<option value="4">item 4</option>
+			</select>
+			</fieldset>
+			
+			<!-- Объединение элементов списка по группам -->
+			<fieldset>
+				<legend>LIST</legend>
+				<select size="8" multiple="">  
+					<optgroup label="group_1">
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					</optgroup>
+					<optgroup disabled="" label="group_2">
+					<option>5</option>
+					<option>6</option>
+					<option>7</option>
+					</optgroup>
+				</select>
+			</fieldset>
+
+			<!-- Время и Дата -->
+			<fieldset>
+				<legend>Data Time</legend>
+				<input type="date">
+				<!--min
+					max
+					date value="2017-05-03"
+					time value="13:34" -->
+			</fieldset>
+			
+			<!-- Взятие цвета -->
+			<fieldset>
+				<legend>Color picker</legend>
+				<input type="Color">
+			</fieldset>
 		</form>
 	</body>
 </html>

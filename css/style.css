@@ -1,0 +1,62 @@
+ .class-name {
+	color: #333;
+	front-weight: bold; /*жирное*/
+	front-style: italic; /*курсив*/
+	height: 200px; /*px | % | em | vh*/
+	width: 200px;
+	background: red;
+	display: block; /*|block | inline | inline-block|none|*/
+	cursor: pointer; /*курсор становится особенным*/
+	background: rgb(0,0,0,0.5); /*цвет фона, прозрачность последняя цифра от 0 до 1*/
+	opacity: .7; /*прозрачность*/
+	border: solid 2px black; /*Рамка - тип размер цвет*/
+	text-align: center;
+	font-size: 124pt;
+}
+
+a:hover {
+	color: forestgreen;
+} /*меняет цвет при наведении*/
+a:link {
+color: green;
+}
+a:visited {
+color: red;
+}
+a{
+	text-decoration: none;
+	color: #333;
+} /*убирает подчеркивание ссылки*/
+
+h3 {
+	color: red;
+}
+
+#elen {
+
+}
+
+.class-name li {
+
+}
+
+.class-name, li { /*запятая является перечеслением*/
+
+}
+
+textarea { 
+	resize: both;
+}
+
+/*Css селекторы*/
+
+/*
+ 	Классы - .class-name (имя придумываем сами, точка в css)
+
+ 	Селекторы тегов - имя тега
+
+ 	Идентифиаторы - id элементов #elen_id
+
+ 	Контекстные селекторы - .class-name li (имя_тега), 
+ 	хорошо использовать для меню
+*/
