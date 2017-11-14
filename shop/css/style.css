@@ -1,0 +1,44 @@
+@import "grid.css";
+/*@import "genm до css"; подключение дополнительных файлов reset и normalise*/
+
+/*Подключение шрифтов через правило*/
+@font-face {
+	font-family: font_name /*гарнитура шрифта*/
+	scr: url(fonts/name);
+}
+/*Подключение через URL (google fonts)*/
+@import url(путь до font)
+
+/*Подключение шрифта к селектору*/
+css_selector {
+	font-family: font_name, cursive;
+}
+/*В случае большого экрана заворачиваем еще в один контейнер для удобства размещения информацииы*/
+.wraper {
+ 	margin: 0 auto;
+ 	max-width: 960px;
+}
+.tst-col {
+	height: 300px;
+	border: 0px solid black;
+	padding: 0;
+}
+.menu {
+	background: gray;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.menu li {
+	display: inline-block;
+	list-style-type: none; /*убрать маркеры списка*/
+}
+.menu a {
+	display: block;
+	padding: 20px;
+	text-decoration: none;
+	color: #333;
+}
+.menu a:hover {
+	background: white;
+}
