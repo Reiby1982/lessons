@@ -1,0 +1,99 @@
+.flex-container {
+	display: flex;
+}
+
+p {
+	background: green;
+	margin: 0;
+}
+
+.flex-container1 {
+    background: lightgray;
+    display: flex;
+    justify-content: flex-start; /*Выравнивание по горизонтали*/
+    /*justify-content: flex-end;*/
+    /*justify-content: space-around;*/
+    /*justify-content: space-between;*/
+    /*justify-content: center;*/
+}
+
+.flex-container2 {
+    background: lightgray;
+    display: flex;
+    /*align-items: flex-start Выравнивание по вертикали*/
+    /*align-items:  flex-end; */
+    align-items: stretch;  по умолчанию, высота как самый высокий элемент
+    /*align-items: center;*/
+    /*align-items: baseline; выравнивание по базовой линии*/
+}
+
+.flex-container3 {
+	background: lightgray;
+    display: flex;
+    flex-direction: row; Направление оси по умолчанию
+    /*flex-direction: row-reverse;*/
+    /*flex-direction: column;*/
+    /*flex-direction: column-reverse;*/
+}
+
+.flex-container4 {
+	background: lightgray;
+    display: flex;
+    width: 250px;
+   	flex-wrap: wrap; Многострочность
+   	/*flex-wrap: wrap-reverse;*/
+    /*flex-wrap: nowrap; По умолчанию*/
+}
+
+.flex-container5 {
+	background: lightgray;
+    display: flex;
+    width: 200px;
+	height: 400px; 
+	flex-wrap: wrap;
+	flex-direction: row;
+    /*align-content: flex-end;*/
+    /*будет работать если задана высота и разрешет перенос строк и указано направление оси
+    Многострочное выравнивание*/
+    align-content: stretch; По умолчанию
+    /*align-content: flex-start;*/
+    /*align-content: center;*/
+    /*align-content: space-around;*/
+    /*align-content: space-between;*/
+}
+
+/*Свойства Flex-елементов*/
+.flex-container6 {
+	background: lightgray;
+    display: flex;
+    height: 300px;
+}
+.order {
+	order: 1; /*изменение порядка  
+	-1 - вначало строки
+	1 - в конец строки
+	0 - на своем месте*/
+}
+.flex-basis {
+	flex-basis: 200px; /*базовая ширина элемента*/ 
+}
+/*Растягивать относительно базовой ширины*/
+.flex-grow {
+	flex-grow: 3; /*коэффициент*/
+}
+/*Сужать относительно базовой ширины*/
+
+.flex-shrink {
+	flex-shrink: 1;
+}
+ 
+/*flex: flex-grow flex-shrink flex-basis*/
+/*flex: 0 1 auto;*/
+
+/*Выравнивание по высоте отдельного элемента*/
+.align-self {
+	align-self: flex-end;
+	/*align-self: center;*/
+	/*align-self: flex-start;*/
+	/*align-self: stretch; По умолчанию*/
+}

@@ -1,0 +1,52 @@
+.container {
+    margin: 0 auto;
+    max-width: 1000px; 
+   
+}
+.border {
+    border: 1px dashed black;
+}
+.gray {
+    background: gray;
+}
+.darkgray {
+    background: darkgray;
+}
+/*Родительский контейнер с горизонтальным направлением*/
+.row-container {
+    display: flex;
+    flex-direction: row;
+}
+.column-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Разбитие по частям*/
+.flex2 {
+    flex:2; /*2 части от родителя*/
+}
+.flex1 {
+    flex:1; /*1 часть от родителя*/
+}
+.hight {
+    height: 200px;
+}
+.margin-top {
+    margin-top: 5px;
+}
+.margin-bottom {
+    margin-bottom: 5px;
+}
+.margin-left {
+    margin-left: 5px;
+}
+.margin-right {
+    margin-right: 5px;
+}
+/*Тень*/
+.shadow:hover {
+    /*box-shadow: none; */
+    /*box-shadow: <shadow>:inset;*/
+    box-shadow: inset 4px 4px 9px 12px red; /*+-X +-Y Размытие Смещение/Выступ Цвет*/
+}
