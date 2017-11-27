@@ -1,0 +1,148 @@
+/*radial-gradiant (form| at right позиция от центра| color1 , color2)*/
+
+.linear-gradient {
+	text-decoration: none;
+	display: inline-block;
+	padding: 20px 30px;
+/*	background: linear-gradient( 
+		сторона| угол наклона/
+		 to top| 0deg;
+		 to right | 
+		 to left| 
+		 to bottom | 270deg)*/
+		 background: linear-gradient(
+		 	20deg, red 0%, yellow 50%, green 100%);
+		 background-size: 200% auto;
+		 transition: 2s; /*- время перехода*/
+		
+}
+.linear-gradient:hover {
+	background-position: bottom center;
+}
+.transition {
+	height: 70px;
+	width: 200px;
+	position: absolute;
+	left: -150px;
+	background: red;
+	transition: background 1s ease 0.1s,
+				left 2s ease 0.1s;
+
+}
+/*transition: переход из одного состояния в другое
+transition-property | 
+transition-duration |
+transition-timing-function|
+transition-delay задержка после наведения
+*/
+
+.transition:hover {
+	background: green;
+	left: 8px;
+}
+
+/*Трансформация*/
+.transform {
+	margin-top: 100px;
+	height: 200px;
+	width: 200px;
+	border-radius: 100px;
+	border: 1px dashed black;
+	background: radial-gradient (#333 50px, #fff 50px);
+	box-shadow: 5px 10px 20px #333;
+	background: repeating-radial-gradient(circle at 200px 100px, #fff, #fff 25px, #fce3ee 25px, #fce3ee 50px);
+	transition: transform 2s;
+}
+
+.transform:hover {
+	transform: translate(100px, 100px) /*изменение позиции*/
+	scale(1.5, 1.5)
+	rotate(720deg);
+	/*transform:matrix();*/
+}
+.triangle {
+	width: 10px;
+	height: 10px;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid red;
+
+}
+/*Анимация*/
+.anim {
+	position: absolute;
+	top: 0;
+	left: 200px;
+	padding: 10px 50px;
+	background: green;
+	animation: animName 10s infinite ease-in-out;
+}
+/*animation:
+animation-name
+animation-duration
+animation-timing-function
+animation-iteration-count - сколько шагов
+animation-direction - направлние*/
+
+@keyframes animName {
+/*	from {
+		background: yellowgreen;
+	}
+	50% {
+		background: blue;
+		padding: 40px 80px;
+	}
+	to {
+		background: red;
+		padding: 10px 50px;
+	} */
+	from,
+	to {
+		top: 0;
+		left: 150px;
+	}
+	25%,
+	75% {
+		top: 90%;
+		padding: 40px 80px;
+	}
+	100% {
+		top: 50%;
+		padding: 10px 50px;
+
+	}
+
+}
+
+ul li {
+	list-style-type: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px; 
+	margin-bottom:5px;
+	background: gray;
+}
+.color1 {
+	animation: color1 2s backwards;
+}
+.color2 {
+	animation: color2 2s backwards 2s;
+}
+.color3 {
+	animation: color3 2s backwards 4s;
+}
+ @keyframes color1 {
+ 	100% {
+ 		background: red;
+ 	}
+ } 
+  @keyframes color2 {
+ 	100% {
+ 		background: yellow;
+ 	}
+ } 
+  @keyframes color3 {
+ 	100% {
+ 		background: green;
+ 	}
+ } 
